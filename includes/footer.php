@@ -4,9 +4,9 @@
             <div class="row align-items-center">
                 <div class="col-md-6 my-2">
                     <div class="nav justify-content-center justify-content-md-start">
-                        <a href=""><i class="ti-twitter-alt"></i></a>
-                        <a href=""><i class="ti-linkedin"></i></a>
-                        <a href=""><i class="ti-github"></i></a>
+                        <a href=""><i class="uil uil-twitter"></i></a>
+                        <a href=""><i class="uil uil-linkedin"></i></a>
+                        <a href=""><i class="uil uil-github"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 my-2 text-center text-md-right">

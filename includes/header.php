@@ -10,6 +10,10 @@
            
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/">
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
     
     <!-- theme css -->
 	 <link rel="stylesheet" href="assets/css/style.css">
