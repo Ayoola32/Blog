@@ -179,6 +179,8 @@ if (isset($_POST['status']) && isset($_POST['post_id'])) {
                 echo "<td>{$row['post_date']}</td>";
                 echo "<td><img class='img-responsive' src='../images/{$row['post_image']}' alt='image' width='150'></td>";
                 echo "<td>" . substr($row['post_content'], 0, 300) . " ........</td>"; // Truncate the content to 500 characters                
+                echo "<td>{$row['post_tags']}</td>";
+
                 ?>
                 <td>
                     <form action="" method="post">
