@@ -128,7 +128,7 @@
                             var options = {
                                 chart: {
                                     title: 'Content Rating',
-                                    subtitle: 'Posts, Comments, Users, and Catgeories:',
+                                    subtitle: 'Posts, Users, and Catgeories:',
                                 },
                                 legend: { position: 'none' } // Hide legend
                             };

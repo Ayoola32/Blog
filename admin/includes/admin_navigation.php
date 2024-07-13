@@ -52,9 +52,7 @@
                         </ul>
                     </li>
 
-
-                    <li> <a href="./comments.php?"><i class="fa fa-fw fa-comment"></i> Comments</a></li>
-
+                    
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-user"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="user" class="collapse">
