@@ -5,7 +5,11 @@
     html, body {
         height: 100%;
         margin: 0;
-        overflow: hidden;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
     }
 
     .main-header {
@@ -50,8 +54,8 @@
         align-items: center;
         justify-content: center;
         height: 100%;
+        margin-bottom: 13.4rem;
     }
-
 
     .px-btn {
         padding: 0 25px;
@@ -153,7 +157,7 @@
                 <!-- Top Menu -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
                     <ul class="navbar-nav ml-auto">
-                        <li><a class="nav-link" href="1index.php"><span>Home</span></a></li>
+                        <li><a class="nav-link" href="index.php"><span>Home</span></a></li>
                         <li><a class="nav-link active" href="about.php"><span>About</span></a></li>
                         <li><a class="nav-link" href="contact.php"><span>Contact</span></a></li>
                     </ul>
@@ -164,89 +168,84 @@
     </header>
     <!-- End Header -->
 
-    <!-- About Me -->
-    <section id="contactme" class="section after-left-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 my-3">
-                    <div class="contct-form">
-                        <div class="sm-title">
-                            <h4 class="font-alt">Contact Me</h4>
-                        </div>
-                        <form action="" method="post" class="wpcf7" accept-charset="UTF-8">
-                             <input type="hidden" name="CRAFT_CSRF_TOKEN" value="B4cPKaPMIw3rpz3GnSJ7IZR9QFMRI6pQQm6e6PadfpeZdXg2EpFOQkPhTEzWmxN7oPBfqcp7I1n_DiVnfGzYEggA54av9gvh4Ac7XUrLLxs=">
-                             <input type="hidden" name="action" value="contact-form/send">
-                                                        <input type="hidden" name="redirect" value="051186d8cd4970954dec686a4bc28b21f2428cedbc752c1dd63ef56701ac0ffd/#contactme">
-
-                            
-                            
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Full name" name="fromName"  id="from-name" value="" required="">
-                                        <label class="form-label">Name</label>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input name="fromEmail" value="" type="email" class="form-control" id="from-email" placeholder="Email address" required="">
-                                        <label class="form-label">Email</label>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input value="" name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
-                                        <label class="form-label">Subject</label>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea name="message" rows="4" class="form-control" placeholder="Type message" id="message" required=""></textarea>
-                                        <label class="form-label">Message</label>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="btn-bar">
-                                        <button class="px-btn px-btn-theme" type="submit">Send your message</button>
-                                    </div>
-                                </div>
+    <!-- Main Content -->
+    <div class="content">
+        <!-- About Me -->
+        <section id="contactme" class="section after-left-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 my-3">
+                        <div class="contct-form">
+                            <div class="sm-title">
+                                <h4 class="font-alt">Contact Me</h4>
                             </div>
-                        </form>
+                            <form action="" method="post" class="wpcf7" accept-charset="UTF-8">                          
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Full name" name="fromName"  id="from-name" value="" required="">
+                                            <label class="form-label">Name</label>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input name="fromEmail" value="" type="email" class="form-control" id="from-email" placeholder="Email address" required="">
+                                            <label class="form-label">Email</label>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input value="" name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
+                                            <label class="form-label">Subject</label>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="message" rows="4" class="form-control" placeholder="Type message" id="message" required=""></textarea>
+                                            <label class="form-label">Message</label>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="btn-bar">
+                                            <button class="px-btn px-btn-theme" type="submit">Send your message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 ml-auto my-3">
-                    <div class="contact-info">
-                        <div class="sm-title">
-                            <h4 class="font-alt">Get in touch</h4>
-                        </div>
-                        <!-- <div class="media">
-                            <div class="icon">
-                                <i class="ti-map"></i>
+                    <div class="col-lg-4 ml-auto my-3">
+                        <div class="contact-info">
+                            <div class="sm-title">
+                                <h4 class="font-alt">Get in touch</h4>
                             </div>
-                            <span class="media-body">123 Stree New York City , <br /> United States Of America <br /> NY 750065.</span>
-                        </div> -->
-                        <div class="media">
-                            <div class="icon">
-                                <i class="uil uil-envelope"></i>
+                            <!-- <div class="media">
+                                <div class="icon">
+                                    <i class="ti-map"></i>
+                                </div>
+                                <span class="media-body">123 Stree New York City , <br /> United States Of America <br /> NY 750065.</span>
+                            </div> -->
+                            <div class="media">
+                                <div class="icon">
+                                    <i class="uil uil-envelope"></i>
+                                </div>
+                                <span class="media-body"><a href="mailto:agboolatawakalit0@gmail.com@gmail.com" style="color:#0f0a0a;">agboolatawakalit0@gmail.com</a></span>
                             </div>
-                            <span class="media-body"><a href="mailto:agboolatawakalit0@gmail.com@gmail.com" style="color:#0f0a0a;">agboolatawakalit0@gmail.com</a></span>
-                        </div>
-                        <div class="media">
-                            <div class="icon">
-                                <i class="uil uil-phone"></i>
+                            <div class="media">
+                                <div class="icon">
+                                    <i class="uil uil-phone"></i>
+                                </div>
+                                <span class="media-body">+44 0744 284 1735</span>
                             </div>
-                            <span class="media-body">+44 0744 284 1735</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-<?php include "includes/footer.php" ?>
+        </section>
+    </div>
+    <?php include "includes/footer.php" ?>
 </body>
