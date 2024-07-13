@@ -17,7 +17,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li><a class="nav-link active" href=""><span>Home</span></a></li>
                         <li><a class="nav-link" href="about.php"><span>About</span></a></li>
-                        <li><a class="nav-link" href=""><span>Contact</span></a></li>
+                        <li><a class="nav-link" href="contact.php"><span>Contact</span></a></li>
                     </ul>
                 </div>
                 <!-- / -->

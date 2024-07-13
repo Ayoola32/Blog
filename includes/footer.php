@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 my-2 text-center text-md-right">
-                    <p>T.O Agboola &copy; 2024</p>
+                <p>&copy; 2024 T.O Research Blog. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
