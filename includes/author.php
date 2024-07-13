@@ -33,9 +33,21 @@
             </div>
             <div class="widget-body">
                 <div class="nav tag-cloud">
-                    <a href="">Python</a>
-                    <a href="">Desertation</a>
-                    <a href="">Research</a>
+                    <?php
+                    $query = "SELECT * FROM category_header LIMIT 3";
+                    $query_result = mysqli_query($connection, $query);
+                    if (!$query_result) {
+                        die("Query Failed " . mysqli_error($connection));
+                    }
+
+                    while ($row = mysqli_fetch_assoc($query_result)) {
+                        $cat_id = $row['cat_id'];
+                        $cat_title = $row['cat_title'];
+
+                        echo "<a href=''>$cat_title</a>";
+                    };
+                    
+                    ?>
                 </div>
             </div>
         </div>
