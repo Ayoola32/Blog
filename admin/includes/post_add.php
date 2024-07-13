@@ -1,36 +1,52 @@
 <?php
-    if(isset($_POST['submit'])){
-        $post_category_id   = $_POST['post_category_id'];
-        $post_title         = $_POST['post_title'];
-        $post_author        = $_POST['post_author'];
-        $post_date          = date('d-m-Y H:i:s');
-        $post_content       = $_POST['post_content'];
-        $post_tags          = $_POST['post_tags'];
-        $post_status        = $_POST['post_status'];
-        $post_users         = $_POST['post_users'];
+if (isset($_POST['submit'])) {
+    $post_category_id   = $_POST['post_category_id'];
+    $post_title         = $_POST['post_title'];
+    $post_author        = $_POST['post_author'];
+    $post_date          = date('d-m-Y H:i:s');
+    $post_content       = $_POST['post_content'];
+    $post_tags          = $_POST['post_tags'];
+    $post_status        = $_POST['post_status'];
+    $post_users         = $_POST['post_users'];
 
-        $post_image         = $_FILES['post_image']['name'];
-        $post_image_temp    = $_FILES["post_image"]['tmp_name'];
-        move_uploaded_file($post_image_temp, "../images/$post_image");
+    $post_image         = $_FILES['post_image']['name'];
+    $post_image_temp    = $_FILES['post_image']['tmp_name'];
 
-        if (empty($post_category_id) || empty($post_title) || empty($post_author) || empty($post_content) || empty($post_tags) || empty($post_status) || empty($post_users)) {
-            echo "<h3 class='text-center'>Field can't be empty</h3>";
-        }else{
-            // using prepare method write a query to add a new post and save to db and display it back to the admin and also homepage
-            $query = "INSERT INTO posts (post_category_id, post_title, post_author, post_content, post_tags, post_status, post_image, post_users, post_date) ";
-            $query.= "VALUES (?, ?, ?, ?, ?, ?, ?, ?,  NOW())";
-            $query_result = mysqli_prepare($connection, $query);
-
-            mysqli_stmt_bind_param($query_result, "isssssss", $post_category_id, $post_title, $post_author, $post_content, $post_tags, $post_status, $post_image, $post_users);
-            if (!mysqli_stmt_execute($query_result)) {
-                die("Execute failed: " . mysqli_stmt_error($query_result));
-            }
-                mysqli_stmt_close($query_result);
-                mysqli_close($connection);
-                header("Location: ./posts.php");
-        }
+    // Check if the upload directory is writable
+    if (!is_writable("../images/")) {
+        echo "<h3 class='text-center'>Upload directory is not writable.</h3>";
+        exit;
     }
 
+    // Check for file upload errors
+    if ($_FILES['post_image']['error'] > 0) {
+        echo "<h3 class='text-center'>File upload error: " . $_FILES['post_image']['error'] . "</h3>";
+        exit;
+    }
+
+    // Move the uploaded file
+    if (!move_uploaded_file($post_image_temp, "../images/$post_image")) {
+        echo "<h3 class='text-center'>Failed to move uploaded file.</h3>";
+        exit;
+    }
+
+    if (empty($post_category_id) || empty($post_title) || empty($post_author) || empty($post_content) || empty($post_tags) || empty($post_status) || empty($post_users)) {
+        echo "<h3 class='text-center'>Field can't be empty</h3>";
+    } else {
+        // using prepare method write a query to add a new post and save to db and display it back to the admin and also homepage
+        $query = "INSERT INTO posts (post_category_id, post_title, post_author, post_content, post_tags, post_status, post_image, post_users, post_date) ";
+        $query .= "VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+        $query_result = mysqli_prepare($connection, $query);
+
+        mysqli_stmt_bind_param($query_result, "isssssss", $post_category_id, $post_title, $post_author, $post_content, $post_tags, $post_status, $post_image, $post_users);
+        if (!mysqli_stmt_execute($query_result)) {
+            die("Execute failed: " . mysqli_stmt_error($query_result));
+        }
+        mysqli_stmt_close($query_result);
+        mysqli_close($connection);
+        header("Location: ./posts.php");
+    }
+}
 ?>
 
 
@@ -56,7 +72,7 @@
             }
             ?>
         </select>
-        </div>
+    </div>
 
     <div class="form-group">
         <label for="post_title">Post Title</label>
@@ -93,7 +109,7 @@
 
     <div class="form-group">
         <label for="post_users">Post User</label>
-        <input value="<?php echo 'usernmae'?>" type="text" class="form-control" name="post_users">
+        <input value="<?php echo 'username' ?>" type="text" class="form-control" name="post_users">
     </div>
 
     <div class="form-group">
