@@ -46,7 +46,7 @@
 								<div class="blog-post">
 									<div class="blog-img">
 										<a href="">
-											<img src="assets/img/1.png" title="" alt="">
+											<img src="images/<?php echo $post_image?>" title="" alt="">
 										</a>
 									</div>
 									<div class="blog-info">
