@@ -436,14 +436,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 .footer .nav a {
     color: #fff;
-    font-size: 14px;
+    font-size: 18px;
     margin-right: 17px;
 }
 .theme-light .footer .nav a {
     color: #251234;
 }
 .footer .nav a:hover {
-    color: #251234;
+    color: #aa75d3;
 }
 .footer p {
     color: #fff;
@@ -1167,56 +1167,123 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     font-weight: 300;
     letter-spacing: 0.2rem;
 }
-.about-section .container {
-    position: relative;
-    z-index: 1;
+
+
+
+.section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f4f4f4;
 }
-.about-section .img-box {
-    position: relative;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
-    box-shadow: inset rgb(37 18 76 / 36%) 15px 15px 70px 10px;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 15px;
+}
+
+.img-box {
+    text-align: center;
+    box-shadow: inset rgba(37, 18, 76, 0.36) 15px 15px 70px 10px;
     background: #fff;
     padding: 10px;
 }
-.about-section .img-box img {
-    position: relative;
+
+.img-display {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: Adds rounded corners */
 }
-.about-section .typo-box {
+
+.typo-box {
     padding-left: 40px;
+    text-align: center;
 }
+
 @media (max-width: 991px) {
-    .about-section .typo-box {
+    .typo-box {
         padding-top: 15px;
-        padding-left: 0px;
+        padding-left: 0;
     }
 }
-.about-section .typo-box h3 {
+
+.typo-box h3 {
     font-size: 40px;
     font-weight: 700;
     color: #251234;
 }
+
 @media (max-width: 767px) {
-    .about-section .typo-box h3 {
+    .typo-box h3 {
         font-size: 30px;
     }
 }
-.about-section .typo-box h5 {
+
+.typo-box h5 {
     font-size: 18px;
     font-weight: 600;
     color: #251234;
     margin-bottom: 15px;
 }
-.about-section .typo-box .lead {
+
+.typo-box p {
     font-weight: normal;
+    font-size: 17px;
 }
+
 @media (max-width: 767px) {
-    .about-section .typo-box .lead {
+    .typo-box p {
         font-size: 17px;
     }
 }
-.about-section .typo-box .btn-bar {
-    padding-top: 12px;
+
+.btn-bar {
+    margin-top: 20px;
 }
+
+.px-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.px-btn-theme {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.px-btn-theme:hover {
+    background-color: #0056b3;
+}
+
+.px-btn-theme-alt {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.px-btn-theme-alt:hover {
+    background-color: #5a6268;
+}
+
+
+
+
 .feature-box-01 {
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;

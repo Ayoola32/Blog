@@ -16,7 +16,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
                     <ul class="navbar-nav ml-auto">
                         <li><a class="nav-link active" href=""><span>Home</span></a></li>
-                        <li><a class="nav-link" href=""><span>About</span></a></li>
+                        <li><a class="nav-link" href="about.php"><span>About</span></a></li>
                         <li><a class="nav-link" href=""><span>Contact</span></a></li>
                     </ul>
                 </div>

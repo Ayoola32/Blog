@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 my-2 text-center text-md-right">
-                    <p>© 2024</p>
+                    <p>T.O Agboola &copy; 2024</p>
                 </div>
             </div>
         </div>
