@@ -9,13 +9,13 @@
             <div class="widget-body">
                 <div class="media align-items-center">
                     <div class="avatar">
-                        <img src="/" title="" alt="">
+                        <img src="./images/55.webp" title="" alt="">
                     </div>
                     <div class="media-body">
-                        <h6>Hello, I'm<br /> Lorem, ipsum..</h6>
+                        <h6>Hello, I'm<br /> T.O Agboola</h6>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil aspernatur, nisi inventore soluta dicta consectetur!.</p>
+                <p>I'm a creative and analytical data scientist with a strong sense of teamwork. I also enjoy producing content to share my knowledge with other scientist and researchers.</p>
                 <br>
                 <div class="btn-bar">
                     <a class="px-btn px-btn-theme" href="">
